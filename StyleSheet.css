@@ -68,7 +68,7 @@ body {
     margin: 5px 0 10px 0;
     border: solid 10px white; 
     border-collapse: collapse;
-    text-align:center;
+    text-align: center;
     color: white;
     background-color: #F08080
 }
@@ -117,7 +117,7 @@ body {
 .cssdetailsview {
     color: #696969;
     background-color: white;
-    margin: 5px 160px 10px 0;
+    margin: 5px 0 10px 0;
     border: solid 1px #525252;
     border-collapse: collapse;
     text-align: center;
@@ -133,13 +133,27 @@ body {
     text-align: center;
     padding: 4px 2px;
     color: white; 
-    background-color: gray;
+    background-color: #696969;
     border-left: solid 1px black;
-    font-weight: bold
+    font-weight: bold;
 }
 
 .cssdetailsview .fieldheader {
     color: black;
     width: 150px;
-    text-align:left;
+    text-align: left;
+}
+
+.cssdetailsview .detailscmd {
+    padding: 10px;
+    color: white;
+    background-color: #696969;
+    font-size: 0.9em;
+    text-decoration: none;
+} 
+
+.cssdetailsview .detailscmd a:hover {
+    color: white;
+    background-color: #7C6F57; 
+    text-decoration: underline;
 }

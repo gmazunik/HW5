@@ -37,27 +37,81 @@
     <asp:DetailsView
         ID="DetailsView1"
         runat="server"
-        Height="50px"
-        Width="125px"
         AutoGenerateRows="False"
         DataSourceID="SqlDataSource1"
         DefaultMode="Insert"
+        HeaderText="Add New Recipe"
         Gridlines="None"
         CssClass="cssdetailsview"
-        PagerStyle-CssClass="pgr"
+        HeaderStyle-CssClass="header"
+        FieldHeaderStyle-CssClass="fieldheader"
+        CommandRowStyle-CssClass="detailscmd"
     >
+<FieldHeaderStyle CssClass="fieldheader"></FieldHeaderStyle>
         <Fields>
-            <asp:BoundField DataField="recipeName" HeaderText="Recipe Name" SortExpression="recipeName" />
-            <asp:BoundField DataField="submittedBy" HeaderText="Submitted By" SortExpression="submittedBy" />
-            <asp:BoundField DataField="ingOne" HeaderText="Ingredient #1" SortExpression="ingOne" />
+            <asp:TemplateField HeaderText="Recipe Name" SortExpression="recipeName">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("recipeName") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*Required" ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
+                </EditItemTemplate>
+                <InsertItemTemplate>
+                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("recipeName") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*Required" ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
+                </InsertItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label1" runat="server" Text='<%# Bind("recipeName") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="Submitted By" SortExpression="submittedBy">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("submittedBy") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*Required" ControlToValidate="TextBox2"></asp:RequiredFieldValidator>
+                </EditItemTemplate>
+                <InsertItemTemplate>
+                    <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("submittedBy") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*Required" ControlToValidate="TextBox2"></asp:RequiredFieldValidator>
+                </InsertItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label2" runat="server" Text='<%# Bind("submittedBy") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="Ingredient #1" SortExpression="ingOne">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("ingOne") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="*Required" ControlToValidate="TextBox3"></asp:RequiredFieldValidator>
+                </EditItemTemplate>
+                <InsertItemTemplate>
+                    <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("ingOne") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="*Required" ControlToValidate="TextBox3"></asp:RequiredFieldValidator>
+                </InsertItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label3" runat="server" Text='<%# Bind("ingOne") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
             <asp:BoundField DataField="ingTwo" HeaderText="Ingredient #2" SortExpression="ingTwo" />
             <asp:BoundField DataField="ingThree" HeaderText="Ingredient #3" SortExpression="ingThree" />
             <asp:BoundField DataField="ingFour" HeaderText="Ingredient #4" SortExpression="ingFour" />
             <asp:BoundField DataField="ingFive" HeaderText="Ingredient #5" SortExpression="ingFive" />
-            <asp:BoundField DataField="recipePrep" HeaderText="Preparation" SortExpression="recipePrep" />
+            <asp:TemplateField HeaderText="Preparation" SortExpression="recipePrep">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("recipePrep") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="*Required" ControlToValidate="TextBox4"></asp:RequiredFieldValidator>
+                </EditItemTemplate>
+                <InsertItemTemplate>
+                    <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("recipePrep") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="*Required" ControlToValidate="TextBox4"></asp:RequiredFieldValidator>
+                </InsertItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label4" runat="server" Text='<%# Bind("recipePrep") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
             <asp:BoundField DataField="recipeNotes" HeaderText="Notes" SortExpression="recipeNotes" />
-            <asp:CommandField ShowInsertButton="True" />
+            <asp:CommandField ShowInsertButton="True" ControlStyle-CssClass="detailscmd" />
         </Fields>
+
+<HeaderStyle CssClass="header"></HeaderStyle>
+
+<PagerStyle CssClass="detailspgr"></PagerStyle>
     </asp:DetailsView>
 </asp:Content>
 
