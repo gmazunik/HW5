@@ -1,0 +1,39 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="~/StyleSheet.css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="header">
+            <h1>Wicked Easy Recipes</h1>
+            <h2>Using 5 Ingredients or Less!</h2>
+        </div>
+        <div id="nav">
+            <ul>
+                <li><a href="./Default.aspx">Home</a></li>
+                <li>&#10033;</li>
+                <li><a href="./NewRecipe.aspx">New Recipe</a></li>
+                <li>&#10033;</li>
+                <li><a href="./AboutUs.aspx">About Us</a></li>
+                <li>&#10033;</li>
+                <li><a href="./ContactUs.aspx">Contact</a></li>
+            </ul>
+        </div>
+        <div id="container">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="footer">© 2013. 06K:183 Software Design & Development</div>
+    </div>
+    </form>
+</body>
+</html>

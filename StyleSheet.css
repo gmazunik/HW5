@@ -1,0 +1,145 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700|Oswald:700|Sanchez);
+
+body {
+    background-color: #D2B48C;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#header, #footer {
+    color: white;
+    background-color: #F08080;
+    border: 1px solid black;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+#header h1 {
+    font-size: 36pt;
+    margin-bottom: -20px;
+}
+
+#header h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: normal;
+}
+
+#nav {
+    margin-top: -20px;
+    color: white;
+    background-color: #696969;
+    text-align: center;
+}
+
+#nav li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14pt;
+}
+
+#nav li a {
+    font-weight: normal;
+    color: white;
+    text-decoration: none;
+}
+
+#nav li a:hover {
+    color: #FFFF99;
+    text-decoration: underline;
+}
+
+.deletedRecipeHighlight {
+    color: #696969;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#container {
+    margin: 0 auto;
+    width: 900px;
+    vertical-align: middle;
+}
+
+.cssgridview {
+    width: 100%;
+    margin: 5px 0 10px 0;
+    border: solid 10px white; 
+    border-collapse: collapse;
+    text-align:center;
+    color: white;
+    background-color: #F08080
+}
+
+.cssgridview td {
+    padding: 10px;
+    border: solid 2px white;
+}
+
+.cssgridview td a, a:visited {
+    color: black;
+    text-decoration:none;
+}
+
+.cssgridview th {
+    padding: 10px;
+    background-color: #FFFF99;
+    font-size: 0.9em;
+}
+  
+.cssgridview th a {
+    color: #696969;
+    text-decoration: none;
+}
+ 
+.cssgridview th a:hover {
+    color: white;
+    background-color: #7C6F57;
+    text-decoration: underline;
+}
+
+.cssgridview .pgr {
+    padding: 10px;
+    background-color: #FFFF99;
+    font-size: 0.9em;
+    color: #696969;
+    text-decoration: none;
+} 
+
+.cssgridview .pgr a:hover {
+    color: white;
+    background-color: #7C6F57; 
+    text-decoration: underline;
+}
+  
+.cssdetailsview {
+    color: #696969;
+    background-color: white;
+    margin: 5px 160px 10px 0;
+    border: solid 1px #525252;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.cssdetailsview td {
+    padding: 10px;
+    border: solid 1px black;
+    text-align: left;
+}
+
+.cssdetailsview .header td {
+    text-align: center;
+    padding: 4px 2px;
+    color: white; 
+    background-color: gray;
+    border-left: solid 1px black;
+    font-weight: bold
+}
+
+.cssdetailsview .fieldheader {
+    color: black;
+    width: 150px;
+    text-align:left;
+}
